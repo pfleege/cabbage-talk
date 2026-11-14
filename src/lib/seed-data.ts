@@ -1,8 +1,8 @@
 // src/lib/seed-data.ts
 
-import { Post } from "@/types";
+import { SeedPost } from "@/types";
 
-export const seedPosts: Post[] = [
+export const seedPosts: SeedPost[] = [
   {
     slug: "garden-toolkit",
     title: "Title-1",

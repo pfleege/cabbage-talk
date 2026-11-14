@@ -1,14 +1,28 @@
 // src/types/index.ts
 
 export interface Post {
+  id: number;
   slug: string;
   title: string;
   excerpt: string;
+  content: string;
   category: string;
   author: string;
   readMinutes: number;
-  publishedAt: string;
+  coverImageUrl: string | null;
   featured: boolean;
-  coverImage: string;
+  publishedAt: Date;
+}
+
+export interface SeedPost {
+  slug: string;
+  title: string;
+  excerpt: string;
   content: string;
+  category: string;
+  author: string;
+  readMinutes: number;
+  coverImage: string | null;
+  featured: boolean;
+  publishedAt: string;
 }
