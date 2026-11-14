@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-gardening}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-gardening_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-gardening}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-gardening} -d ${POSTGRES_DB:-gardening}",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  pgdata:
