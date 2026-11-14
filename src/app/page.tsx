@@ -5,7 +5,18 @@ import { pool, ensureDatabase } from "@/lib/db";
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  ensureDatabase();
-  const { rows } = await pool.query("SELECT now() AS now");
-  return <p className="p-8 text-xl">Database time: {String(rows[0].now)}</p>;
+  await ensureDatabase();
+  const { rows } = await pool.query("SELECT * FROM posts LIMIT 1");
+  const data = await Promise.all(rows);
+
+  return (
+    <>
+      {data.map((item) => (
+        <div key={item.id}>
+          <h2>{item.title}</h2>
+          <img src={item.cover_image_url} alt="" />
+        </div>
+      ))}
+    </>
+  );
 }
