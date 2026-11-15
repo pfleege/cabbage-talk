@@ -65,3 +65,11 @@ export async function getCategories(): Promise<
   );
   return rows;
 }
+
+export async function getFeaturedPost(): Promise<Post | null> {
+  await ensureDatabase();
+  const { rows } = await pool.query<PostRow>(
+    `SELECT ${COLUMNS} FROM posts ORDER BY featured DESC, published_at DESC LIMIT 1`,
+  );
+  return rows[0] ? mapRow(rows[0]) : null;
+}
