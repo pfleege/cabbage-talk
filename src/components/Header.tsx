@@ -1,6 +1,7 @@
 // src/components/Header.tsx
 
 import Link from "next/link";
+import { Logo } from "./Logo";
 
 const topics = [
   "Tools",
@@ -16,6 +17,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-line bg-chalk/90 backdrop-blur">
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-6 px-5">
         <Link href="/" className="flex items-center gap-3">
+          <Logo />
           <h2 className="font-display text-2xl font-bold tracking-tight">
             Cabbage Talk
           </h2>

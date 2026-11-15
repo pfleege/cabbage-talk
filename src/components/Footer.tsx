@@ -1,4 +1,7 @@
+// src/components/Footer.tsx
+
 import Link from "next/link";
+import { Logo } from "./Logo";
 
 export function Footer() {
   return (
@@ -6,6 +9,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.4fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
+            <Logo />
             <h2 className="font-display text-2xl font-bold tracking-tight">
               Cabbage Talk
             </h2>
