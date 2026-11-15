@@ -17,7 +17,7 @@ export default async function HomePage() {
             Latest articles
           </h2>
           <Link
-            href="#"
+            href="/blog"
             className="font-bold underline decoration-pulse decoration-4 underline-offset-4"
           >
             See all articles

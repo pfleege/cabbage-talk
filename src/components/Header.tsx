@@ -2,6 +2,15 @@
 
 import Link from "next/link";
 
+const topics = [
+  "Tools",
+  "Soil Preparation",
+  "Planting Seeds",
+  "Plant Health",
+  "Structures",
+  "Sustainability",
+];
+
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-chalk/90 backdrop-blur">
@@ -21,6 +30,15 @@ export function Header() {
           >
             All articles
           </Link>
+          {topics.map((t) => (
+            <Link
+              key={t}
+              href={`/blog?category=${t}`}
+              className="hidden rounded-full px-4 py-2 text-muted transition hover:bg-mist hover:text-ink lg:block"
+            >
+              {t}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
