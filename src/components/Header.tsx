@@ -5,9 +5,9 @@ import { Logo } from "./Logo";
 
 const topics = [
   "Tools",
-  "Soil Preparation",
-  "Planting Seeds",
-  "Plant Health",
+  "Preparation",
+  "Planting",
+  "Growing",
   "Structures",
   "Sustainability",
 ];

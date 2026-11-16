@@ -142,7 +142,7 @@ export const seedPosts: SeedPost[] = [
     title: "Simple Structures for a Productive Garden",
     excerpt:
       "Raised beds, trellises and compost bins make a garden easier to manage and more productive. Start with one and build from there.",
-    category: "Garden Structures",
+    category: "Structures",
     author: "Markus Ahlgren",
     readMinutes: 4,
     publishedAt: "2026-10-07T10:45:00Z",
