@@ -73,3 +73,12 @@ export async function getFeaturedPost(): Promise<Post | null> {
   );
   return rows[0] ? mapRow(rows[0]) : null;
 }
+
+export async function getPostBySlug(slug: string): Promise<Post | null> {
+  await ensureDatabase();
+  const { rows } = await pool.query<PostRow>(
+    `SELECT ${COLUMNS} FROM posts WHERE slug = $1`,
+    [slug],
+  );
+  return rows[0] ? mapRow(rows[0]) : null;
+}
