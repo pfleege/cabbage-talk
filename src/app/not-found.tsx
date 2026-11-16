@@ -9,7 +9,7 @@ export default function NotFound() {
       <p className="mt-4 text-lg text-muted">
         The article may have moved, or the link is wrong. Try the full list.
       </p>
-      <Link href="/" className="btn btn-primary mt-8">
+      <Link href="/blog" className="btn btn-primary mt-8">
         Browse articles
       </Link>
     </div>
