@@ -2,6 +2,7 @@
 
 import { notFound } from "next/navigation";
 import { getPostBySlug } from "@/lib/queries";
+import { BlogBody } from "@/components/BlogBody";
 
 export const dynamic = "force-dynamic";
 
@@ -16,7 +17,7 @@ export default async function PostPage({ params }: Params) {
     <article className="mx-auto max-w-6xl px-5 py-12">
       <h1 className="text-4xl font-extrabold">{post.title}</h1>
       <div className="mt-6">
-        <p>{post.content}</p>
+        <BlogBody content={post.content} />
       </div>
     </article>
   );
