@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { getFeaturedPost } from "@/lib/queries";
 
-export const dynamic = "force-dynamic";
-
 export default async function Hero() {
   const featured = await getFeaturedPost();
 

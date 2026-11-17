@@ -3,9 +3,8 @@
 import Link from "next/link";
 import { getCategories } from "@/lib/queries";
 
-const [categories] = await Promise.all([getCategories()]);
-
 export default async function TopicSelector() {
+  const categories = await getCategories();
   return (
     <>
       <section
