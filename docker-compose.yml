@@ -19,6 +19,16 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+  web:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-gardening}:${POSTGRES_PASSWORD:-gardening_dev_password}@db:5432/${POSTGRES_DB:-gardening}
+    ports:
+      - "3000:3000"
 
 volumes:
   pgdata:
