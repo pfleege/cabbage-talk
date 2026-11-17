@@ -42,7 +42,7 @@ export function BlogMeta({ post }: { post: Post }) {
 
 export function BlogRow({ post }: { post: Post }) {
   return (
-    <article className="border-t border-line first:border-t-0">
+    <article className="border-t border-pulse first:border-t-0">
       <Link
         href={`/blog/${post.slug}`}
         className="group grid gap-6 py-8 sm:grid-cols-[15rem_1fr] sm:items-center sm:gap-10"

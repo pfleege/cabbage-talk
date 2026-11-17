@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <div className="mx-auto max-w-6xl pb-20 bg-green-50/90">{children}</div>
         <Footer />
       </body>
     </html>

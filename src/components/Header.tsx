@@ -14,7 +14,7 @@ const topics = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-chalk/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-linear-240 from-chalk/90 via-green-200/40 to-chalk/90 backdrop-blur shadow-2xl">
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-6 px-5">
         <Link href="/" className="flex items-center gap-3">
           <Logo />

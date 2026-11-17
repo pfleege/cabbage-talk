@@ -20,7 +20,7 @@ export default async function BlogPage({
   )?.name;
 
   return (
-    <div className="mx-auto max-w-6xl px-5 py-14">
+    <div className="mx-auto min-h-[calc(100vh-(--spacing(31.5))-(--spacing(60)))] max-w-6xl px-5 py-14">
       <h1 className="text-5xl font-extrabold sm:text-6xl">All articles</h1>
       <div className="mt-6">
         {posts.map((post) => (
